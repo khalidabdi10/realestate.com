@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+
+  .logo-container {
+    text-align: center;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+  }
+
+  /* Stylized "K" with roofline */
+  .icon {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  /* The letter K */
+  .k {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    color: navy;
+    display: inline-block;
+    position: relative;
+  }
+
+  /* Create a stylized "K" with a roof */
+  .k::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    border-top: 8px solid rgb(71, 65, 30); /* Roof line */
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    transform: rotate(45deg);
+    transform-origin: top center;
+  }
+
+  /* Main name "Khalid" */
+  .name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #0D1B2A; /* Navy blue */
+    margin: 0;
+  }
+
+  /* Subtext "Real Estate" */
+  .tagline {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #0D1B2A;
+    margin-top: 5px;
+  }
+</style>
+<body>
+    <div class="logo-container">
+    <!-- Icon with stylized K -->
+    <div class="icon">
+      <div class="k">K</div>
+    </div>
+    <!-- Name -->
+    <h1 class="name">Khalid</h1>
+    <!-- Subtext -->
+    <div class="tagline">Real Estate</div>
+  </div>
+</body>
+</html>

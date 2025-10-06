@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Khalid Real Estate</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400&display=swap" rel="stylesheet" />
+<style>
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  header {
+  background-color: #ffffff; 
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  
+}
+
+
+header * {
+  margin: 0;
+  padding: 0;
+}
+
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .logo .icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .logo .k {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: gold;
+    display: inline-block;
+    position: relative;
+  }
+
+  .logo .k::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 50px;
+    height: 25px;
+    border-top: 4px solid gold;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    transform: rotate(45deg);
+    transform-origin: top center;
+  }
+
+ 
+  .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+  }
+
+
+  .menu-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #FFC107; 
+  }
+
+  
+  .login {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  
+  @media(max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+    }
+    .logo {
+      margin-bottom: 10px;
+    }
+    .menu-container {
+      position: static;
+      transform: none;
+      margin: 10px 0;
+    }
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    .login {
+      margin-top: 10px;
+    }
+  }
+
+  
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #0D1B2A;
+    margin: 0 40px;
+  }
+
+ 
+  main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #0D1B2A, #1B263B);
+    color: #fff;
+    border-radius: 8px;
+  }
+
+  .hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+.properties {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.property-card:hover {
+  transform: scale(1.02);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 15px;
+}
+
+.property-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.property-info p {
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  font-weight: 700;
+  color: #0D1B2A;
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  
+  <div class="logo">
+    <div class="icon">
+      <div class="k">K</div>
+    </div>
+    <h1 class="title">Khalid</h1>
+  </div>
+  
+  <div class="menu-container">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Properties</a>
+      <a href="#">About Us</a>
+      <a href="#">FAQ </a>
+      
+      <a href="#">Blog</a>
+    </nav>
+  </div>
+ 
+  <a href="#" class="login">Login</a>
+</header>
+
+<hr />
+
+<main>
+  <section class="hero">
+    <h2>Welcome to Khalid Real Estate</h2>
+    <p>Your trusted partner in finding the perfect property. Explore our listings and services tailored to your needs.</p>
+  </section>
+</main>
+<section class="properties">
+  <h2 style="text-align:center; margin-bottom:20px; font-family:'Montserrat', sans-serif; font-weight:600;">Our Properties</h2>
+  <div class="property-grid">
+ 
+    <div class="property-card">
+      <img src="houses/download (1).jpg" alt="House 1" />
+      <div class="property-info">
+        <h3>Luxury Villa</h3>
+        <p>Location: kazanga</p>
+        <p class="price">$2,500,000</p>
+      </div>
+    </div>
+  
+    <div class="property-card">
+      <img src="houses/image2.jpeg" alt="House 2" />
+      <div class="property-info">
+        <h3>Modern Apartment</h3>
+        <p>Location: kisasi</p>
+        <p class="price">$950,000</p>
+      </div>
+    </div>
+   
+    <div class="property-card">
+      <img src="houses/image1.jpg" alt="House 3" />
+      <div class="property-info">
+        <h3>fancy villa</h3>
+        <p>Location: lunguja</p>
+        <p class="price">$3,200,000</p>
+      </div>
+    </div>
+   
+    <div class="property-card">
+      <img src="houses/image4.jpg" alt="House 4" />
+      <div class="property-info">
+        <h3>old model</h3>
+        <p>Location: mengo</p>
+        <p class="price">$850,000</p>
+      </div>
+    </div>
+   
+    <div class="property-card">
+      <img src="houses/download (3).jpg" alt="House 5" />
+      <div class="property-info">
+        <h3>normal house</h3>
+        <p>Location: Downtown </p>
+        <p class="price">$750,000</p>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <img src="houses/image5.jpg" alt="House 6" />
+      <div class="property-info">
+        <h3>family house</h3>
+        <p>Location: wakiso</p>
+        <p class="price">$1,200,000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
